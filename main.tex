@@ -1,0 +1,81 @@
+\documentclass[a4paper,10pt,fleqn]{article} % Definiert Papier = A4; 
+                                            % Schriftgrösse = 10Punkte; 
+                                            % Mathe.-Gl. Modus = linksbündig 
+                                            % (siehe http://lefti.amigager.de/latex/Aufbau.html) 
+
+\usepackage[utf8x]{inputenc}                % utf8x kann alle Textcodierungen interpretieren
+
+\usepackage{graphics}                       % Package für Einfügen/Anpassen von Grafiken
+\usepackage{graphicx}
+
+\usepackage[english,ngerman]{babel}         % ngerman = Neues Deutsch; babel = internationalisierung einschalten
+
+\usepackage{amsmath}                        
+\usepackage[all]{xy}
+\usepackage[xindy]{glossaries}
+\usepackage{makeidx}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{printlen}
+
+\usepackage{cite}
+
+
+
+\usepackage{pdfpages}                        % Packet für PDF Dateimanipulation laden
+
+\usepackage{fancyhdr}                        % http://en.wikibooks.org/wiki/LaTeX/Page_Layout#Customising_with_fancyhdr
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+
+\addtolength{\textwidth}{1cm}
+\addtolength{\evensidemargin}{-5mm}
+\addtolength{\oddsidemargin}{-5mm}
+
+\addtolength{\headwidth}{1cm}
+
+\rhead{\setlength{\unitlength}{1mm}
+\begin{picture}(-2,7)
+    \includegraphics[width=35mm]{hslu_logo2.PNG}
+\end{picture}}
+
+\fancyhead[L]{Umweltmanagement für KMU} %Kopfzeile links
+\fancyhead[C]{} %zentrierte Kopfzeile
+%\fancyhead[R]%{HSLU - T\&A}
+%\fancyhead[R]{\includegraphics[scale=0.25]{hslu_logo2.PNG}}
+\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+\fancyfoot[L]{Kontextgruppe 8}
+\fancyfoot[C]{HS - 2012}
+\fancyfoot[R]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+\begin{document}
+
+\selectlanguage{ngerman}
+
+% Hier stehen die Dateien, welche eingefügt werden müssen
+\include{deckblatt}
+\include{titelseite}
+\thispagestyle{empty}\tableofcontents
+\include{abstract}
+\include{einleitung}
+\include{aufgabenstellung}
+\include{grobplanung}
+\include{gruppenorganigramm}
+\include{kmu_auswahl}
+\include{meilensteine}
+\include{unternehmensprofil}
+\include{beispiel_gruppe}
+
+
+\selectlanguage{ngerman}
+
+\listoffigures
+
+\bibliography{bibliografie}{}
+\bibliographystyle{plain}
+
+
+
+\end{document}
